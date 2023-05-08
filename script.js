@@ -26,3 +26,12 @@ function changeColor() {
   if (blockId.value>=9) {
     alert("Invalid block Id");
   }
+  
+  resetGrid();
+  console.log(blockId.value)
+  const gridItem = document.getElementById(`${blockId.value}`);
+  gridItem.style.backgroundColor = colorId.value;
+
+  blockId.value = "";
+  colorId.value = "";
+}
